@@ -2,6 +2,8 @@ package com.shivam.computernetworking.fragments;
 
 
 
+import android.annotation.SuppressLint;
+import android.content.Context;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
@@ -16,8 +18,14 @@ import android.webkit.WebViewClient;
 import android.widget.ScrollView;
 import android.widget.TextView;
 
+import com.pddstudio.highlightjs.HighlightJsView;
+import com.pddstudio.highlightjs.models.Language;
+import com.pddstudio.highlightjs.models.Theme;
+import com.shivam.computernetworking.MainActivity;
 import com.shivam.computernetworking.R;
 
+import java.net.MalformedURLException;
+import java.net.URL;
 
 
 /**
@@ -25,20 +33,19 @@ import com.shivam.computernetworking.R;
  */
 public class DiffieHellman extends android.app.Fragment {
 
-
     public DiffieHellman() {
         // Required empty public constructor
     }
 
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+    public View onCreateView(LayoutInflater inflater, final ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View rootview= inflater.inflate(R.layout.fragment_diffie_hellman, container, false);
         final TextView textView = rootview.findViewById(R.id.textiewdiffiehellman);
         final ScrollView scroll1=rootview.findViewById(R.id.scrol7);
-        final WebView wb=rootview.findViewById(R.id.web2);
+        final HighlightJsView highlightJsView = (HighlightJsView)rootview.findViewById(R.id.code7);
 
         BottomNavigationView bottomNavigationView = rootview.findViewById(R.id.bottom_navigation);
 
@@ -48,27 +55,22 @@ public class DiffieHellman extends android.app.Fragment {
                     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                         switch (item.getItemId()) {
                             case R.id.descriptions:
-                                wb.setVisibility(View.GONE);
+                                highlightJsView.setVisibility(View.GONE);
                                 scroll1.setVisibility(View.VISIBLE);
                                 textView.setVisibility(View.VISIBLE);
                                 break;
                             case R.id.code:
-                                wb.setVisibility(View.VISIBLE);
+                                highlightJsView.setVisibility(View.VISIBLE);
                                 scroll1.setVisibility(View.GONE);
                                 textView.setVisibility(View.GONE);
-                                wb.setWebViewClient(new AOVD.MyBrowser());
-                                wb.getSettings().setLoadsImagesAutomatically(true);
-                                wb.getSettings().setJavaScriptEnabled(true);
-                                wb.getSettings().setJavaScriptEnabled(true);
-                                wb.getSettings().setDatabaseEnabled(true);
-                                wb.getSettings().setDomStorageEnabled(true);
-                                wb.getSettings().setAppCacheEnabled(true);
-                                wb.getSettings().setSupportZoom(true);
-                                wb.getSettings().setBuiltInZoomControls(true);
-                                wb.getSettings().setDisplayZoomControls(true);
-                                wb.animate();
-                                wb.setScrollBarStyle(View.SCROLLBARS_INSIDE_OVERLAY);
-                                wb.loadUrl("https://ide.codingblocks.com/#/s/9883");
+                                highlightJsView.setTheme(Theme.ANDROID_STUDIO);
+                                highlightJsView.setHighlightLanguage(Language.AUTO_DETECT);
+
+                                try {
+                                    highlightJsView.setSource(new URL("https://raw.githubusercontent.com/shivamgarg11/ComputerNetworking/master/Deffie_Hellman.md"));
+                                } catch (MalformedURLException e) {
+                                    e.printStackTrace();
+                                }
 
                                 break;
                         }

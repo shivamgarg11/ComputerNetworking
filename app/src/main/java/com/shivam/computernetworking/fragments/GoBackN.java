@@ -16,8 +16,13 @@ import android.webkit.WebViewClient;
 import android.widget.ScrollView;
 import android.widget.TextView;
 
+import com.pddstudio.highlightjs.HighlightJsView;
+import com.pddstudio.highlightjs.models.Language;
+import com.pddstudio.highlightjs.models.Theme;
 import com.shivam.computernetworking.R;
 
+import java.net.MalformedURLException;
+import java.net.URL;
 
 
 /**
@@ -38,8 +43,7 @@ public class GoBackN extends android.app.Fragment {
         View rootview= inflater.inflate(R.layout.fragment_go_back_n, container, false);
         final TextView textView = rootview.findViewById(R.id.textiewgobackn);
         final ScrollView scroll1=rootview.findViewById(R.id.scrol5);
-        final WebView wb=rootview.findViewById(R.id.web4);
-
+        final HighlightJsView highlightJsView = (HighlightJsView)rootview.findViewById(R.id.code5);
 
         BottomNavigationView bottomNavigationView = rootview.findViewById(R.id.bottom_navigation);
 
@@ -49,28 +53,24 @@ public class GoBackN extends android.app.Fragment {
                     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                         switch (item.getItemId()) {
                             case R.id.descriptions:
-                                wb.setVisibility(View.GONE);
+                                highlightJsView.setVisibility(View.GONE);
                                 scroll1.setVisibility(View.VISIBLE);
                                 textView.setVisibility(View.VISIBLE);
                                 break;
                             case R.id.code:
-                                wb.setVisibility(View.VISIBLE);
                                 scroll1.setVisibility(View.GONE);
                                 textView.setVisibility(View.GONE);
-                                wb.setWebViewClient(new AOVD.MyBrowser());
-                                wb.getSettings().setLoadsImagesAutomatically(true);
-                                wb.getSettings().setJavaScriptEnabled(true);
-                                wb.getSettings().setJavaScriptEnabled(true);
-                                wb.getSettings().setDatabaseEnabled(true);
-                                wb.getSettings().setDomStorageEnabled(true);
-                                wb.getSettings().setAppCacheEnabled(true);
-                                wb.getSettings().setSupportZoom(true);
-                                wb.getSettings().setBuiltInZoomControls(true);
-                                wb.getSettings().setDisplayZoomControls(true);
-                                wb.animate();
-                                wb.setScrollBarStyle(View.SCROLLBARS_INSIDE_OVERLAY);
-                                wb.loadUrl("https://ide.codingblocks.com/#/s/9941");
+                                highlightJsView.setVisibility(View.VISIBLE);
+                                scroll1.setVisibility(View.GONE);
+                                textView.setVisibility(View.GONE);
+                                highlightJsView.setTheme(Theme.ANDROID_STUDIO);
+                                highlightJsView.setHighlightLanguage(Language.AUTO_DETECT);
 
+                                try {
+                                    highlightJsView.setSource(new URL("https://raw.githubusercontent.com/shivamgarg11/ComputerNetworking/master/gobackn.txt"));
+                                } catch (MalformedURLException e) {
+                                    e.printStackTrace();
+                                }
                                 break;
                         }
                         return false;
