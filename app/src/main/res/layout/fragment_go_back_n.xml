@@ -1,0 +1,47 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.shivam.computernetworking.fragments.GoBackN"
+    android:orientation="vertical">
+
+
+
+    <ScrollView
+        android:id="@+id/scrol5"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <TextView
+        android:id="@+id/textiewgobackn"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="20dp"
+        android:text="@string/goback_desc"
+        android:textStyle="bold"
+        android:layout_weight="1"
+        android:textAppearance="@style/TextAppearance.AppCompat.Subhead"/>
+    </ScrollView>
+
+    <WebView
+        android:layout_weight="1"
+        android:id="@+id/web4"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </WebView>
+
+    <android.support.design.widget.BottomNavigationView
+        android:layout_gravity="bottom"
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        app:itemBackground="@color/colorPrimary"
+        app:itemIconTint="#fff"
+        app:itemTextColor="#fff"
+        app:menu="@menu/bottomnav" />
+
+</LinearLayout>

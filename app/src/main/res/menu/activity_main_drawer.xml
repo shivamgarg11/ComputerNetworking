@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item android:title="ENCRYPTION TECHNIQUES">
+            <menu>
+                <item
+                    android:id="@+id/DiffieHellman"
+                    android:title="\t\t\t\t* Diffie Hellman" />
+                <item
+                    android:id="@+id/RSA"
+                    android:title="\t\t\t\t* RSA" />
+            </menu>
+        </item>
+
+        <item android:title="ROUTING TECHNIQUE">
+            <menu>
+                <item
+                    android:id="@+id/LinkState"
+                    android:title="\t\t\t\t* Link State" />
+                <item
+                    android:id="@+id/DistanceVector"
+                    android:title="\t\t\t\t* Distance Vector" />
+                <item
+                    android:id="@+id/AODV"
+                    android:title="\t\t\t\t* AODV" />
+            </menu>
+        </item>
+    </group>
+
+    <item android:title="TRANSFER PROTOCOL">
+        <menu>
+            <item
+                android:id="@+id/SelectiveRepeat"
+                android:title="\t\t\t\t* Selective Repeat" />
+            <item
+                android:id="@+id/GoBackN"
+                android:title="\t\t\t\t* Go Back N" />
+
+            <item
+                android:id="@+id/StopAndWait"
+                android:title="\t\t\t\t* Stop And Wait" />
+        </menu>
+    </item>
+
+</menu>

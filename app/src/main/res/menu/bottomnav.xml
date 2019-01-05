@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/descriptions"
+        android:enabled="true"
+        android:title="DESCRIPTION"
+        android:icon="@drawable/description"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/waste"
+        android:enabled="true"
+        android:title=""
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/code"
+        android:enabled="true"
+        android:icon="@drawable/code"
+        android:title="CODE"
+        app:showAsAction="ifRoom" />
+</menu>
