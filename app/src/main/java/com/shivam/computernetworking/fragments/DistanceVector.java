@@ -13,6 +13,9 @@ import android.view.ViewGroup;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.LinearLayout;
 import android.widget.ScrollView;
 import android.widget.TextView;
 
@@ -45,6 +48,9 @@ public class DistanceVector extends android.app.Fragment {
         final ScrollView scroll1=rootview.findViewById(R.id.scrol6);
         final HighlightJsView highlightJsView = (HighlightJsView)rootview.findViewById(R.id.code6);
 
+
+
+
         BottomNavigationView bottomNavigationView = rootview.findViewById(R.id.bottom_navigation);
 
         bottomNavigationView.setOnNavigationItemSelectedListener(
@@ -57,6 +63,8 @@ public class DistanceVector extends android.app.Fragment {
                                 scroll1.setVisibility(View.VISIBLE);
                                 textView.setVisibility(View.VISIBLE);
                                 break;
+
+
                             case R.id.code:
                                 scroll1.setVisibility(View.GONE);
                                 textView.setVisibility(View.GONE);
@@ -73,12 +81,26 @@ public class DistanceVector extends android.app.Fragment {
                                 }
 
                                 break;
+
+
+
+
+                            case R.id.tryit:
+                                highlightJsView.setVisibility(View.GONE);
+                                scroll1.setVisibility(View.GONE);
+                                textView.setVisibility(View.GONE);
+
                         }
                         return false;
                     }
                 });
 
         return  rootview;}
+
+
+
+
+
 
     static class MyBrowser extends WebViewClient {
         @Override
