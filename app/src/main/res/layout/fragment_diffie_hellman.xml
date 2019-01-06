@@ -35,6 +35,61 @@
         android:layout_height="match_parent" />
 
 
+    <LinearLayout
+        android:layout_weight="1"
+        android:visibility="gone"
+        android:padding="20dp"
+        android:id="@+id/LINEAR"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_marginTop="20dp"
+            android:id="@+id/INPUTTEXT"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="INPUT"
+            style="@style/TextAppearance.AppCompat.Headline"/>
+
+
+        <EditText
+            android:id="@+id/INPUT"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=""/>
+
+  <Button
+    android:id="@+id/SUBMIT"
+    android:text="SUBMIT"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginRight="20dp"
+    android:layout_marginLeft="20dp"/>
+
+        <TextView
+            android:textSize="30dp"
+            android:layout_marginTop="30dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="CONSOLE"
+            style="@style/TextAppearance.AppCompat.Headline"/>
+
+
+        <TextView
+            style="@style/TextAppearance.AppCompat.Subhead"
+            android:id="@+id/CONSOLE"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=""/>
+
+
+
+
+
+    </LinearLayout>
+
+
 
 
     <android.support.design.widget.BottomNavigationView
