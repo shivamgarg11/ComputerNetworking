@@ -32,6 +32,80 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/Scrol55"
+        android:visibility="gone"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:layout_marginTop="20dp"
+                android:id="@+id/INPUTTEXT5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="INPUT"
+                style="@style/TextAppearance.AppCompat.Headline"/>
+
+
+            <EditText
+                android:id="@+id/INPUT5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""/>
+
+            <Button
+                android:id="@+id/SUBMIT5"
+                android:text="SUBMIT"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="20dp"/>
+
+            <TextView
+                android:textSize="30dp"
+                android:layout_marginTop="30dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="CONSOLE"
+                style="@style/TextAppearance.AppCompat.Headline"/>
+
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/Scrol555"
+                android:visibility="gone"
+                android:layout_weight="1">
+
+
+            <TextView
+                style="@style/TextAppearance.AppCompat.Subhead"
+                android:id="@+id/CONSOLE5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""/>
+
+
+            </ScrollView>
+
+
+
+        </LinearLayout>
+
+
+
+    </ScrollView>
+
+
     <android.support.design.widget.BottomNavigationView
         android:layout_gravity="bottom"
         android:id="@+id/bottom_navigation"
