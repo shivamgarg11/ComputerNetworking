@@ -63,11 +63,11 @@ public class DiffieHellman extends android.app.Fragment {
                                 highlightJsView.setVisibility(View.VISIBLE);
                                 scroll1.setVisibility(View.GONE);
                                 textView.setVisibility(View.GONE);
-                                highlightJsView.setTheme(Theme.ANDROID_STUDIO);
+                                highlightJsView.setTheme(Theme.ARDUINO_LIGHT);
                                 highlightJsView.setHighlightLanguage(Language.AUTO_DETECT);
 
                                 try {
-                                    highlightJsView.setSource(new URL("https://raw.githubusercontent.com/shivamgarg11/ComputerNetworking/master/Deffie_Hellman.md"));
+                                    highlightJsView.setSource(new URL("https://raw.githubusercontent.com/shivamgarg11/ComputerNetworking/master/Deffie_Hellman.txt"));
                                 } catch (MalformedURLException e) {
                                     e.printStackTrace();
                                 }

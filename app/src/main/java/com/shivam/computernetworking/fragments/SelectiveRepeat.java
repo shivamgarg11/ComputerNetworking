@@ -62,7 +62,7 @@ public class SelectiveRepeat extends android.app.Fragment {
                                 highlightJsView.setVisibility(View.VISIBLE);
                                 scroll1.setVisibility(View.GONE);
                                 textView.setVisibility(View.GONE);
-                                highlightJsView.setTheme(Theme.ANDROID_STUDIO);
+                                highlightJsView.setTheme(Theme.ARDUINO_LIGHT);
                                 highlightJsView.setHighlightLanguage(Language.AUTO_DETECT);
 
                                 try {

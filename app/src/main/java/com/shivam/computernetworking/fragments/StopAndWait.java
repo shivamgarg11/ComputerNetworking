@@ -65,11 +65,11 @@ final ScrollView scroll1=rootview.findViewById(R.id.scrol1);
                                 highlightJsView.setVisibility(View.VISIBLE);
                                 scroll1.setVisibility(View.GONE);
                                 textView.setVisibility(View.GONE);
-                                highlightJsView.setTheme(Theme.ANDROID_STUDIO);
+                                highlightJsView.setTheme(Theme.ARDUINO_LIGHT);
                                 highlightJsView.setHighlightLanguage(Language.AUTO_DETECT);
 
                                 try {
-                                    highlightJsView.setSource(new URL("hhttps://raw.githubusercontent.com/shivamgarg11/ComputerNetworking/master/stopandwait.txt"));
+                                    highlightJsView.setSource(new URL("https://raw.githubusercontent.com/shivamgarg11/ComputerNetworking/master/stopandwait.txt"));
                                 } catch (MalformedURLException e) {
                                     e.printStackTrace();
                                 }

@@ -15,9 +15,9 @@ public class WelcomeActivity extends AwesomeSplash {
         configSplash.setAnimCircularRevealDuration(2000);
         configSplash.setRevealFlagX(Flags.REVEAL_RIGHT);
         configSplash.setRevealFlagY(Flags.REVEAL_BOTTOM);
-        configSplash.setLogoSplash(R.mipmap.logo2);
+        configSplash.setLogoSplash(R.drawable.networking_logo);
         configSplash.setAnimLogoSplashDuration(2000);
-        configSplash.setAnimLogoSplashTechnique(Techniques.ZoomIn);
+        configSplash.setAnimLogoSplashTechnique(Techniques.FadeIn);
         configSplash.setTitleSplash("Computer Networking");
         configSplash.setTitleTextColor(R.color.white);
         configSplash.setTitleTextSize(30f); //float value
