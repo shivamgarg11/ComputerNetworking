@@ -1,33 +1,82 @@
 package com.shivam.computernetworking;
 
+import android.app.Activity;
 import android.content.Intent;
+import android.os.Bundle;
+import android.os.Handler;
+import android.view.View;
+import android.widget.ImageView;
 
 import com.daimajia.androidanimations.library.Techniques;
+import com.skyfishjy.library.RippleBackground;
 import com.viksaa.sssplash.lib.activity.AwesomeSplash;
 import com.viksaa.sssplash.lib.cnst.Flags;
 import com.viksaa.sssplash.lib.model.ConfigSplash;
 
-public class WelcomeActivity extends AwesomeSplash {
+public class WelcomeActivity extends Activity {
 
-    @Override
-    public void initSplash(ConfigSplash configSplash) {
-        configSplash.setBackgroundColor(R.color.colorPrimary);
-        configSplash.setAnimCircularRevealDuration(2000);
-        configSplash.setRevealFlagX(Flags.REVEAL_RIGHT);
-        configSplash.setRevealFlagY(Flags.REVEAL_BOTTOM);
-        configSplash.setLogoSplash(R.drawable.networking_logo);
-        configSplash.setAnimLogoSplashDuration(2000);
-        configSplash.setAnimLogoSplashTechnique(Techniques.FadeIn);
-        configSplash.setTitleSplash("Computer Networking");
-        configSplash.setTitleTextColor(R.color.white);
-        configSplash.setTitleTextSize(30f); //float value
-        configSplash.setAnimTitleDuration(3000);
-        configSplash.setAnimTitleTechnique(Techniques.FlipInX);
-    }
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_welcome);
 
-    @Override
-    public void animationsFinished() {
-        startActivity(new Intent(WelcomeActivity.this,MainActivity.class));
-        finish();
+
+        final RippleBackground rippleBackground=findViewById(R.id.content);
+                rippleBackground.startRippleAnimation();
+
+
+        new Handler().postDelayed(new Runnable() {
+
+            @Override
+            public void run() {
+                startActivity(new Intent(WelcomeActivity.this,MainActivity.class));
+                rippleBackground.stopRippleAnimation();
+                finish();
+            }
+        }, 4000);
+
+
+        new Handler().postDelayed(new Runnable() {
+
+            @Override
+            public void run() {
+
+                ImageView image1=findViewById(R.id.image1);
+                image1.setVisibility(View.VISIBLE);
+            }
+        }, 1000);
+
+
+
+        new Handler().postDelayed(new Runnable() {
+
+            @Override
+            public void run() {
+
+                ImageView image2=findViewById(R.id.image2);
+                image2.setVisibility(View.VISIBLE);
+            }
+        }, 2000);
+
+        new Handler().postDelayed(new Runnable() {
+
+            @Override
+            public void run() {
+
+                ImageView image3=findViewById(R.id.image3);
+                image3.setVisibility(View.VISIBLE);
+            }
+        }, 2500);
+
+        new Handler().postDelayed(new Runnable() {
+
+            @Override
+            public void run() {
+
+                ImageView image4=findViewById(R.id.image4);
+                image4.setVisibility(View.VISIBLE);
+            }
+        }, 4000);
+
+
     }
 }
