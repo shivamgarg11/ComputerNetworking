@@ -9,9 +9,10 @@ import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-import android.webkit.WebView;
-import android.webkit.WebViewClient;
+import com.shivam.computernetworking.Algos.selectivendrep;
 
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ScrollView;
 import android.widget.TextView;
 
@@ -44,7 +45,14 @@ public class SelectiveRepeat extends android.app.Fragment {
         BottomNavigationView bottomNavigationView = rootview.findViewById(R.id.bottom_navigation);
         final TextView textView = rootview.findViewById(R.id.textiewselectiverepeat);
         final ScrollView scroll1=rootview.findViewById(R.id.scrol2);
-        final HighlightJsView highlightJsView = (HighlightJsView)rootview.findViewById(R.id.code2);
+        final HighlightJsView highlightJsView = rootview.findViewById(R.id.code2);
+
+        final TextView console2=rootview.findViewById(R.id.console2);
+        final EditText input=rootview.findViewById(R.id.input2);
+        final Button btn2=rootview.findViewById(R.id.submit2);
+
+        final ScrollView scroll22=rootview.findViewById(R.id.scroll22);
+
 
         bottomNavigationView.setOnNavigationItemSelectedListener(
                 new BottomNavigationView.OnNavigationItemSelectedListener() {
@@ -52,11 +60,13 @@ public class SelectiveRepeat extends android.app.Fragment {
                     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                         switch (item.getItemId()) {
                             case R.id.descriptions:
+                                scroll22.setVisibility(View.GONE);
                                 highlightJsView.setVisibility(View.GONE);
                                 scroll1.setVisibility(View.VISIBLE);
                                 textView.setVisibility(View.VISIBLE);
                                 break;
                             case R.id.code:
+                                scroll22.setVisibility(View.GONE);
                                 scroll1.setVisibility(View.GONE);
                                 textView.setVisibility(View.GONE);
                                 highlightJsView.setVisibility(View.VISIBLE);
@@ -72,6 +82,28 @@ public class SelectiveRepeat extends android.app.Fragment {
                                 }
 
                                 break;
+
+                            case R.id.tryit:
+                                scroll1.setVisibility(View.GONE);
+                                textView.setVisibility(View.GONE);
+                                highlightJsView.setVisibility(View.GONE);
+                                scroll22.setVisibility(View.VISIBLE);
+
+
+                                btn2.setOnClickListener(new View.OnClickListener() {
+                                    @Override
+                                    public void onClick(View v) {
+                                        selectivendrep selectivendrep=new selectivendrep();
+                                        String str=selectivendrep.input(Integer.valueOf(input.getText().toString()));
+                                        console2.setText(str);
+                                        input.setText("");
+                                    }
+                                });
+
+
+
+
+                                break;
                         }
                         return false;
                     }
@@ -79,12 +111,6 @@ public class SelectiveRepeat extends android.app.Fragment {
 
         return  rootview;}
 
-    static class MyBrowser extends WebViewClient {
-        @Override
-        public boolean shouldOverrideUrlLoading(WebView view, String url) {
-            view.loadUrl(url);
-            return true;
-        }
-    }
+
 
 }

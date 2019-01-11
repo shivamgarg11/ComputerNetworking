@@ -80,12 +80,6 @@ public class LinkState extends android.app.Fragment {
 
         return  rootview;}
 
-    static class MyBrowser extends WebViewClient {
-        @Override
-        public boolean shouldOverrideUrlLoading(WebView view, String url) {
-            view.loadUrl(url);
-            return true;
-        }
-    }
+
 
 }

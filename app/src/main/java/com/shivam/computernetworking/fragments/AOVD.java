@@ -54,22 +54,6 @@ public class AOVD extends android.app.Fragment {
                                 textView.setVisibility(View.VISIBLE);
                                 break;
                             case R.id.code:
-                                wb.setVisibility(View.VISIBLE);
-                                scroll1.setVisibility(View.GONE);
-                                textView.setVisibility(View.GONE);
-                                wb.setWebViewClient(new MyBrowser());
-                                wb.getSettings().setLoadsImagesAutomatically(true);
-                                wb.getSettings().setJavaScriptEnabled(true);
-                                wb.getSettings().setJavaScriptEnabled(true);
-                                wb.getSettings().setDatabaseEnabled(true);
-                                wb.getSettings().setDomStorageEnabled(true);
-                                wb.getSettings().setAppCacheEnabled(true);
-                                wb.getSettings().setSupportZoom(true);
-                                wb.getSettings().setBuiltInZoomControls(true);
-                                wb.getSettings().setDisplayZoomControls(true);
-                                wb.animate();
-                                wb.setScrollBarStyle(View.SCROLLBARS_INSIDE_OVERLAY);
-                                wb.loadUrl("");
 
                                 break;
                         }
@@ -79,12 +63,5 @@ public class AOVD extends android.app.Fragment {
 
     return  rootview;}
 
-        static class MyBrowser extends WebViewClient {
-            @Override
-            public boolean shouldOverrideUrlLoading(WebView view, String url) {
-                view.loadUrl(url);
-                return true;
-            }
-    }
 
 }

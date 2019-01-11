@@ -9,8 +9,7 @@ import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-import android.webkit.WebView;
-import android.webkit.WebViewClient;
+
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ScrollView;
@@ -112,12 +111,6 @@ public class RSA extends android.app.Fragment {
 
         return  rootview;}
 
-    static class MyBrowser extends WebViewClient {
-        @Override
-        public boolean shouldOverrideUrlLoading(WebView view, String url) {
-            view.loadUrl(url);
-            return true;
-        }
-    }
+
 
 }

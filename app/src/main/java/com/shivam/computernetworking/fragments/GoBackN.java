@@ -169,12 +169,5 @@ submit.setOnClickListener(new View.OnClickListener() {
 
         return  rootview;}
 
-    static class MyBrowser extends WebViewClient {
-        @Override
-        public boolean shouldOverrideUrlLoading(WebView view, String url) {
-            view.loadUrl(url);
-            return true;
-        }
-    }
 
 }
