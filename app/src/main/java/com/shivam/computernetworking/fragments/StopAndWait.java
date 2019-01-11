@@ -77,7 +77,7 @@ public class StopAndWait extends android.app.Fragment {
                                 textView.setVisibility(View.GONE);
                                 highlightJsView.setVisibility(View.VISIBLE);
                                 highlightJsView.setTheme(Theme.ARDUINO_LIGHT);
-                                highlightJsView.setHighlightLanguage(Language.AUTO_DETECT);
+                                highlightJsView.setHighlightLanguage(Language.JAVA);
 
                                 try {
                                     highlightJsView.setSource(new URL("https://raw.githubusercontent.com/shivamgarg11/ComputerNetworking/master/stopandwait.txt"));

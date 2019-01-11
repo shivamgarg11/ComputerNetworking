@@ -86,7 +86,7 @@ public class GoBackN extends android.app.Fragment {
                                 scroll1.setVisibility(View.GONE);
                                 textView.setVisibility(View.GONE);
                                 highlightJsView.setTheme(Theme.ARDUINO_LIGHT);
-                                highlightJsView.setHighlightLanguage(Language.AUTO_DETECT);
+                                highlightJsView.setHighlightLanguage(Language.JAVA);
 
                                 try {
                                     highlightJsView.setSource(new URL("https://raw.githubusercontent.com/shivamgarg11/ComputerNetworking/master/gobackn.txt"));
