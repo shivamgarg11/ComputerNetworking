@@ -12,10 +12,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
-
-import android.widget.Button;
-import android.widget.EditText;
-import android.widget.LinearLayout;
 import android.widget.ScrollView;
 import android.widget.TextView;
 
@@ -72,7 +68,7 @@ public class DistanceVector extends android.app.Fragment {
                                 scroll1.setVisibility(View.GONE);
                                 textView.setVisibility(View.GONE);
                                 highlightJsView.setTheme(Theme.ARDUINO_LIGHT);
-                                highlightJsView.setHighlightLanguage(Language.AUTO_DETECT);
+                                highlightJsView.setHighlightLanguage(Language.JAVA);
 
                                 try {
                                     highlightJsView.setSource(new URL("https://raw.githubusercontent.com/shivamgarg11/ComputerNetworking/master/DVR.txt"));

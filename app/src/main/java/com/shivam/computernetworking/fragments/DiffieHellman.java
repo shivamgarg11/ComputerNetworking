@@ -2,8 +2,6 @@ package com.shivam.computernetworking.fragments;
 
 
 
-import android.annotation.SuppressLint;
-import android.content.Context;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
@@ -14,7 +12,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
-
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
@@ -24,11 +21,9 @@ import android.widget.TextView;
 import com.pddstudio.highlightjs.HighlightJsView;
 import com.pddstudio.highlightjs.models.Language;
 import com.pddstudio.highlightjs.models.Theme;
-import com.shivam.computernetworking.MainActivity;
 import com.shivam.computernetworking.R;
 
 import java.io.BufferedReader;
-import java.io.IOException;
 import java.io.InputStreamReader;
 import java.math.BigInteger;
 import java.net.MalformedURLException;
@@ -91,7 +86,7 @@ public class DiffieHellman extends android.app.Fragment {
                                 textView.setVisibility(View.GONE);
                                 highlightJsView.setVisibility(View.VISIBLE);
                                 highlightJsView.setTheme(Theme.ARDUINO_LIGHT);
-                                highlightJsView.setHighlightLanguage(Language.AUTO_DETECT);
+                                highlightJsView.setHighlightLanguage(Language.JAVA);
 
                                 try {
                                     highlightJsView.setSource(new URL("https://raw.githubusercontent.com/shivamgarg11/ComputerNetworking/master/Deffie_Hellman.txt"));
