@@ -27,7 +27,7 @@
 
         <EditText
             android:layout_width="40dp"
-            android:layout_height="35dp"
+            android:layout_height="50dp"
             android:inputType="number"
             android:layout_marginRight="5dp"
             android:layout_gravity="center"
@@ -60,7 +60,7 @@
 
         <EditText
             android:layout_width="40dp"
-            android:layout_height="35dp"
+            android:layout_height="50dp"
             android:inputType="number"
             android:layout_marginRight="5dp"
             android:layout_gravity="center"
@@ -92,7 +92,7 @@
 
     <EditText
         android:layout_width="40dp"
-        android:layout_height="35dp"
+        android:layout_height="50dp"
         android:inputType="number"
         android:layout_marginRight="5dp"
         android:layout_gravity="center"
